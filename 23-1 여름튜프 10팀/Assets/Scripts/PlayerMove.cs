@@ -1,0 +1,59 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMove : MonoBehaviour
+{
+    private Rigidbody2D rigid;
+    public float jumpPower;
+    public int jumpcnt=0;
+
+    void jump()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            if (jumpcnt!=0)
+            {
+                jumpcnt--;
+                rigid.AddForce(Vector3.up*jumpPower,ForceMode2D.Impulse);
+            }
+        }
+    }
+
+    void slide()
+    {
+        if(Input.GetKey(KeyCode.Space))
+        {
+            if (jumpcnt==2) 
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+                transform.position = new Vector3(-7, -4, 0);
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            transform.localScale = new Vector3(1, 2, 1);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.name.Equals("Bottom")) 
+        {
+            jumpcnt = 2;
+        }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rigid = GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        jump();
+        slide();
+    }
+}
