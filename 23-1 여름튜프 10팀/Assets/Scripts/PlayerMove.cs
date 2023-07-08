@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
 
     void jump()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (jumpcnt!=0)
             {
@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
 
     void slide()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKey(KeyCode.LeftControl))
         {
             if (jumpcnt==2) 
             {
@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour
                 transform.position = new Vector3(-7, -4, 0);
             }
         }
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             transform.localScale = new Vector3(1, 2, 1);
         }
