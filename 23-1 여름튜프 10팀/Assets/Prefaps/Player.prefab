@@ -13,9 +13,11 @@ GameObject:
   - component: {fileID: 7829153181144521354}
   - component: {fileID: 7829153181144521353}
   - component: {fileID: 7829153181144521365}
+  - component: {fileID: 8793788993925021335}
+  - component: {fileID: 7596843765748938818}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,12 +104,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!61 &7829153181144521353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,5 +148,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7602fbd49d9f042b1f678b140bfd30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 15
+  jumpPower: 20
+  sjpower: 30
   jumpcnt: 0
+  playerspd: 0
+--- !u!114 &8793788993925021335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7829153181144521352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ff67fa2fa3a5949a4ce8a52d09aa01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &7596843765748938818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7829153181144521352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6dacd1f70448744b6eaf452f83b897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxHP: 5

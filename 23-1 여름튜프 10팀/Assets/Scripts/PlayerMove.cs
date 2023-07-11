@@ -6,7 +6,9 @@ public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D rigid;
     public float jumpPower;
+    public float sjpower;
     public int jumpcnt=0;
+    public int playerspd=0;
 
     void jump()
     {
@@ -19,7 +21,6 @@ public class PlayerMove : MonoBehaviour
             }
         }
     }
-
     void slide()
     {
         if(Input.GetKey(KeyCode.LeftControl))
@@ -34,6 +35,21 @@ public class PlayerMove : MonoBehaviour
         {
             transform.localScale = new Vector3(1, 2, 1);
         }
+    }
+    public void superjump()
+    {
+        jumpcnt = 0;
+        rigid.AddForce(Vector3.up * sjpower, ForceMode2D.Impulse);
+    }
+    private void move()
+    {
+        float playermove = Time.deltaTime * playerspd;
+        transform.Translate(playermove, 0, 0);
+    }
+
+    public void goal()
+    {
+        playerspd= 10;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -55,5 +71,6 @@ public class PlayerMove : MonoBehaviour
     {
         jump();
         slide();
+        move();
     }
 }

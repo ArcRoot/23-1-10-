@@ -21,11 +21,11 @@ public class PlayerHP : MonoBehaviour
             {
                 HPManager.Instance.SetGameOver();
             }
-        }
+        }*/
         if (hp <= 0)
         {
             Destroy(gameObject);
-        }*/
+        }
     }
     public void DecreaseHP(int Damage)
     {
