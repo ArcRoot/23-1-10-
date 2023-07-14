@@ -6,15 +6,16 @@ public class Goal : MonoBehaviour
 {
     //GameObject[] enemys;
     //GameObject[] objects;
-    private void OnCollisionEnter2D(Collision2D player)
+    private void OnTriggerEnter2D(Collider2D player)
     {
         /*for (int i = 0; i<enemys.Length; i++)
         {
             enemys[i].GetComponent<ObjectMove>().game_end();
         }*/
-        gameObject.GetComponent<ObjectMove>().game_end();
-        player.gameObject.GetComponent<PlayerMove>().goal();
-        Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), player.gameObject.GetComponent<Collider2D>());
+        //gameObject.GetComponent<ObjectMove>().game_end();
+        //player.gameObject.GetComponent<PlayerMove>().goal();
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMove>().camspd = 0f;
+        //Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), player.gameObject.GetComponent<Collider2D>());
     }
     // Start is called before the first frame update
     void Start()

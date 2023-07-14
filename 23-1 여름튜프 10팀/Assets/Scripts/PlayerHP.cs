@@ -30,5 +30,6 @@ public class PlayerHP : MonoBehaviour
     public void DecreaseHP(int Damage)
     {
         hp -= Damage;
+        GameObject.FindGameObjectWithTag("hpmanager").GetComponent<HPManager>().HP_remove(hp);
     }
 }

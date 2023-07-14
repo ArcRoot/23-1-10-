@@ -7,6 +7,8 @@ TagManager:
   - enemy
   - object
   - bottom
+  - springboard
+  - hpmanager
   layers:
   - Default
   - TransparentFX
