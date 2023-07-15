@@ -9,7 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2115836962181259666, guid: ebb066a18d943f744b31da546d65866f, type: 3}
       propertyPath: m_Name
-      value: Thorn
+      value: Thorn_ceiling
+      objectReference: {fileID: 0}
+    - target: {fileID: 2115836962181259677, guid: ebb066a18d943f744b31da546d65866f, type: 3}
+      propertyPath: objectspd
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2115836962181259678, guid: ebb066a18d943f744b31da546d65866f, type: 3}
       propertyPath: m_RootOrder

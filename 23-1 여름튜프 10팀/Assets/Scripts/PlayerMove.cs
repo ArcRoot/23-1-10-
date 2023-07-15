@@ -23,12 +23,12 @@ public class PlayerMove : MonoBehaviour
     }
     void slide()
     {
-        if(Input.GetKey(KeyCode.LeftControl))
+        if(Input.GetKeyDown(KeyCode.LeftControl))
         {
             if (jumpcnt==2) 
             {
                 transform.localScale = new Vector3(1, 1, 1);
-                transform.position = new Vector3(-7, -4, 0);
+                transform.Translate(new Vector3(0, -0.5f, 0));
             }
         }
         if (Input.GetKeyUp(KeyCode.LeftControl))

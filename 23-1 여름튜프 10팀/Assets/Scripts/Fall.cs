@@ -9,7 +9,13 @@ public class Fall : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("fall");
-        collision.gameObject.transform.Translate(new Vector3(0, 3.4f, 0));
+        collision.gameObject.transform.Translate(new Vector3(2, 5, 0));
+        collision.gameObject.GetComponent<PlayerMove>().playerspd = 0;
+        GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(new Vector3(2, 0, 0));
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ObjectMove>().objectspd = 0;
+        transform.Translate(new Vector3(2, 0, 0));
+        gameObject.GetComponent<ObjectMove>().objectspd = 0;
+        graceperiod = 3;
         fallchk=true;
     }
     // Start is called before the first frame update
@@ -23,15 +29,18 @@ public class Fall : MonoBehaviour
     {
         if (fallchk)
         {
-            graceperiod = 2;
-            fallchk=false;
-        }
-        if (graceperiod>0)
-        {
-            graceperiod -= Time.deltaTime;
-            if (graceperiod <= 0)
+            if (graceperiod > 0)
+            {
+                graceperiod -= Time.deltaTime;
+
+            }
+            else if (graceperiod <= 0)
             {
                 graceperiod = 0;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().playerspd = 10;
+                GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ObjectMove>().objectspd = 10;
+                gameObject.GetComponent<ObjectMove>().objectspd = 10;
+                fallchk =false;
             }
         }
     }

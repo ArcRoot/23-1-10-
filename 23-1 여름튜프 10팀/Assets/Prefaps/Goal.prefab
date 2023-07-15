@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc0319df919222449cc760c0dd2957f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectspd: -10
+  objectspd: 0
 --- !u!114 &-4396732976106079558
 MonoBehaviour:
   m_ObjectHideFlags: 0

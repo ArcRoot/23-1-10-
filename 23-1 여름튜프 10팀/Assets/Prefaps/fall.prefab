@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6283736236229107804}
   - component: {fileID: 6283736236229107805}
   - component: {fileID: 8761696713982597328}
+  - component: {fileID: 6923265238356864312}
   m_Layer: 0
   m_Name: fall
   m_TagString: enemy
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b33c9aa65892d48b37a4a1b699d9f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6923265238356864312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6283736236229107806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc0319df919222449cc760c0dd2957f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectspd: 10

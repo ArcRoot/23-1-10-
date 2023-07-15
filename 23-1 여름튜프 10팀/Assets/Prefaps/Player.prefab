@@ -151,7 +151,7 @@ MonoBehaviour:
   jumpPower: 20
   sjpower: 30
   jumpcnt: 0
-  playerspd: 0
+  playerspd: 10
 --- !u!114 &8793788993925021335
 MonoBehaviour:
   m_ObjectHideFlags: 0
