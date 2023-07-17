@@ -6,6 +6,7 @@ public class PlayerHP : MonoBehaviour
 {
     public int hp;
     public int maxHP = 5;
+    
 
     void Start()
     {
@@ -24,12 +25,13 @@ public class PlayerHP : MonoBehaviour
         }*/
         if (hp <= 0)
         {
-            Destroy(gameObject);
+            GameObject.FindObjectOfType<Scene_Manager>().ChangeDieScene();
         }
     }
     public void DecreaseHP(int Damage)
     {
         hp -= Damage;
+
         GameObject.FindGameObjectWithTag("hpmanager").GetComponent<HPManager>().HP_remove(hp);
     }
 }

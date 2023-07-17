@@ -6,6 +6,7 @@ public class Fall : MonoBehaviour
 {
     private bool fallchk=false;
     private float graceperiod = 0;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("fall");

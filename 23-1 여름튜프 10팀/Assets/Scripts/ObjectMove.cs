@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectMove : MonoBehaviour
 {
-    public int objectspd=-10;
+    public int objectspd;
     // Start is called before the first frame update
     private void move()
     {

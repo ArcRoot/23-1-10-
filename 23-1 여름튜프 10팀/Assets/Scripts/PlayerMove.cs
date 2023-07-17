@@ -25,11 +25,8 @@ public class PlayerMove : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
-            if (jumpcnt==2) 
-            {
-                transform.localScale = new Vector3(1, 1, 1);
-                transform.Translate(new Vector3(0, -0.5f, 0));
-            }
+            transform.localScale = new Vector3(1, 1, 1);
+            transform.Translate(new Vector3(0, -0.5f, 0));
         }
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
@@ -54,7 +51,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.name.Equals("Bottom")) 
+        if(other.gameObject.CompareTag("bottom")) 
         {
             jumpcnt = 2;
         }

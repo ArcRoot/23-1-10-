@@ -5,6 +5,7 @@ using UnityEngine;
 public class HPManager : MonoBehaviour
 {
     public List<GameObject> HP;
+    public List<GameObject> HPstr;
     public void HP_add(int hpcnt)
     {
         if (hpcnt <= 10)
@@ -20,6 +21,7 @@ public class HPManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HPstr.Add(Instantiate<GameObject>(Resources.Load<GameObject>("HPstr"), new Vector3(17, 940f, 0), Quaternion.identity, GameObject.Find("Canvas").transform));
         HP_add(1);
         HP_add(2);
         HP_add(3);
