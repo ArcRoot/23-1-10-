@@ -9,27 +9,27 @@ public class Scene_Manager : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("Start");
-    }/*
-    public void ChangeLevel1Scene()
-    {
-        Time.timeScale = 1.0f;
-        SceneManager.LoadScene("Level1");
     }
-    public void ChangeLevel2Scene()
+    public void ChangeStageSelectScene()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("StageSelect");
     }
-    public void ChangeLevel3Scene()
+    public void ChangeStage1Scene()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("Level3");
+        SceneManager.LoadScene("Stage1");
     }
-    public void ChangeInfiniteModeScene()
+    public void ChangeStage2Scene()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene("InfiniteMode");
-    }*/
+        SceneManager.LoadScene("Stage2");
+    }
+    public void ChangeStage3Scene()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("Stage3");
+    }
     public void ChangeGameClearScene()
     {
         Time.timeScale = 1.0f;
@@ -46,15 +46,19 @@ public class Scene_Manager : MonoBehaviour
         Time.timeScale = 1.0f;
         SceneManager.LoadScene("Pause");
     }
-    public void ChangeTestScene()
-    {
-        Time.timeScale = 1.0f;
-        SceneManager.LoadScene("Test");
-    }
     public void Restart_Level()
     {
         SceneManager.LoadScene(PlayerPrefs.GetString("lastLoadedScene"));
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
+    /*public void ChangeInfiniteModeScene()
+    {
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("InfiniteMode");
+    }*/
     // Start is called before the first frame update
     void Start()
     {

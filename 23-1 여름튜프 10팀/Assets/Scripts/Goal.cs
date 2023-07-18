@@ -15,6 +15,7 @@ public class Goal : MonoBehaviour
         //gameObject.GetComponent<ObjectMove>().game_end();
         //player.gameObject.GetComponent<PlayerMove>().goal();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ObjectMove>().objectspd = 0;
+        GameObject.FindGameObjectWithTag("destroybar").GetComponent<ObjectMove>().objectspd = 0;
         //Physics2D.IgnoreCollision(gameObject.GetComponent<Collider2D>(), player.gameObject.GetComponent<Collider2D>());
     }
     // Start is called before the first frame update

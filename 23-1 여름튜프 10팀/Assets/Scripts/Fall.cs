@@ -14,6 +14,7 @@ public class Fall : MonoBehaviour
         collision.gameObject.GetComponent<PlayerMove>().playerspd = 0;
         GameObject.FindGameObjectWithTag("MainCamera").transform.Translate(new Vector3(2, 0, 0));
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ObjectMove>().objectspd = 0;
+        GameObject.FindGameObjectWithTag("destroybar").GetComponent<ObjectMove>().objectspd = 0;
         transform.Translate(new Vector3(2, 0, 0));
         gameObject.GetComponent<ObjectMove>().objectspd = 0;
         graceperiod = 3;
@@ -40,6 +41,7 @@ public class Fall : MonoBehaviour
                 graceperiod = 0;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>().playerspd = 10;
                 GameObject.FindGameObjectWithTag("MainCamera").GetComponent<ObjectMove>().objectspd = 10;
+                GameObject.FindGameObjectWithTag("destroybar").GetComponent<ObjectMove>().objectspd = 10;
                 gameObject.GetComponent<ObjectMove>().objectspd = 10;
                 fallchk =false;
             }
