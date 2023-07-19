@@ -14,7 +14,7 @@ public class PlayerCrash : MonoBehaviour
     public int damage = 1;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.tag == "enemy" || other.gameObject.tag == "fall") // 무적 아이템 먹었을 때 fall이 enemy로 분류되어 무시되는 것 방지 
         {
             color_change_R();
             GetComponent<PlayerHP>().DecreaseHP(damage);
