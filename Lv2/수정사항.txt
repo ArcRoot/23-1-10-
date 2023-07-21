@@ -1,0 +1,7 @@
+
+Item_booster, Item_ignore 스크립트/프리팹 추가
+player 프리팹에 아이템(부스터, 무적) 스크립트 연결
+Stage2 씬 추가
+메인카메라, 구멍 발판, 플레이어 제외한 오브젝트 프리팹에서 ObjectMove 컴포넌트 삭제
+구멍 발판 태그 enemy -> fall
+PlayerCrash 스크립트에서 조건 수정 (enemy||fall)
